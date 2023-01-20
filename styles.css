@@ -1,0 +1,135 @@
+*, *::after, *::before {
+box-sizing: border-box;  /*Especifica o comportamento das propriedades da largura e da altura*/
+}
+
+:root { /*Essencialmente as cores*/
+  --hue: 300;
+  --saturation: 50%;
+  --foreground-color: hsl(var(--hue), var(--saturation), 75%);
+  --background-color: hsl(var(--hue), var(--saturation), 20%);
+}
+
+body { /*Mudar a margem e a cor de fundo*/
+  margin: 0;  
+  background-color: var(--background-color);
+  overflow: hidden;
+} 
+
+.paddle { 
+  --position: 50;
+  
+  position: absolute;
+  background-color: var(--foreground-color);
+  top: calc(var(--position) * 1vh);
+  transform: translateY(-50%);
+  width: 1.5vh;
+  height: 15vh;
+} 
+
+.paddle.left {
+  left: 1vw;
+} 
+
+.paddle.right {
+  right: 1vw;
+}
+
+.ball {
+  --x: 50;
+  --y: 50;
+  
+  position: absolute;
+  background-color: var(--foreground-color);
+  left: calc(var(--x) * 1vw);
+  top: calc(var(--y) * 1vh);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5vh;
+  height: 2.5vh;  
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  font-weight: bold; 
+  font-size: 5vh;
+  color: var(--foreground-color);   
+  margin-top: -6px;
+}
+
+.score > * {
+  flex-grow: 1;
+  flex-basis: 1; 
+  padding: 0 50vh; 
+  margin:  1vh 0;
+  opacity: .5;
+}
+
+.score > :first-child {
+  text-align: right;
+  border-right: .6vh solid var(--foreground-color);
+  height: 100vh;   
+}
+
+.btn5 {
+  margin-top: 0px;
+  margin-left: 717px;
+  width: 100px;
+  height: 30px;
+  border: none;
+  color: rgb(0, 0, 0);
+  background-color: var(--foreground-color);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  transition: ease-out 0.3s;
+  font-size: 1rem;
+  outline: none;
+}
+
+.btn5:hover {
+  box-shadow: inset 100px 0 0 0 #000000;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.btnon2 {
+  margin-top: 0px;
+  margin-left: -204px;
+  width: 100px;
+  height: 30px;
+  border: none;
+  color: rgb(0, 0, 0);
+  background-color: var(--foreground-color);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  transition: ease-out 0.3s;
+  font-size: 1rem;
+  outline: none;
+}
+
+.btnon2:hover {
+  box-shadow: inset 100px 0 0 0 #000000;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.btnoff2 {
+  margin-top: 0px;
+  margin-left: 96px;
+  width: 100px;
+  height: 30px;
+  border: none;
+  color: rgb(0, 0, 0);
+  background-color: var(--foreground-color);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  transition: ease-out 0.3s;
+  font-size: 1rem;
+  outline: none;
+}
+
+.btnoff2:hover {
+  box-shadow: inset 100px 0 0 0 #000000;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}

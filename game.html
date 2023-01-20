@@ -1,0 +1,48 @@
+<!--Pressionamos ponto de exclamação e enter para gerar um código boilerplate e poder abrir uma página no browser-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!--link permite ligar o documento index a outros documentos-->
+    <script src="script.js" type="module"></script> <!--src para incorporar um script diretamente num documento-->
+    <!--type serve para atribuir o valor de módulo ao script e significa que o ficheiro contém javascript-->
+    <title>Pong Master Game</title>
+</head>
+<body>
+  <a href="http://127.0.0.1:5500/index.html">
+    <button button class="btn5">Voltar</button>
+  </a>
+  <audio autoplay id="Musiquinha de Fundo" loop="">
+    <source src="BackgroundMusic.mp3">
+  </audio>
+  
+  <button onclick="playAudio()" 
+  button class="btnon2 "
+  type="button">Sound on</button>
+  <button onclick="pauseAudio()" 
+  button class="btnoff2 "
+  type="button">Sound off</button> 
+
+  <script>
+  var x = document.getElementById("Musiquinha de Fundo")
+  function playAudio() {x.play();} 
+  function pauseAudio() {x.pause();} 
+  </script>
+
+  <script>
+    var audio = document.getElementById("Musiquinha de Fundo");
+    audio.volume = 0.15;
+  </script>
+
+  <!--class é para o css e o id é para o js-->
+  <div class="score"> 
+  <div id="player-score">0</div>
+  <div id="computer-score">0</div>
+  </div>
+  <div class="ball" id="ball"></div> 
+  <div class="paddle left" id="player-paddle"></div>
+ <div class="paddle right" id="computer-paddle"></div> 
+</body>
+</html>

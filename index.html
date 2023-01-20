@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Pong Menu</title>
+<link rel="stylesheet" href="menu.css">
+</head>
+<body>
+        <a href="http://127.0.0.1:5500/game.html">
+            <button
+            button class="btn1">VAMOS JOGAR!</button>
+        </a>
+
+        <a href="http://127.0.0.1:5500/info.html">
+            <button2
+            button2 class="btn2">O QUE É O ‎ ‎ PONG MASTER?</button>
+        </a>
+
+        <p id="test"
+        p class="texto">BEM-VINDO AO PONG MASTER!</p>
+
+        <p id="test2"
+        p class="texto2">Desenvolvedores:</p>
+
+        <p id="test3"
+        p class="texto3">Diogo Horta e Rodrigo Afonso</p>
+
+        <audio autoplay id="Musiquinha do menu" loop="">
+            <source src="RickRoll8Bit.mp3">
+          </audio>
+          <button onclick="playAudio()" 
+          button class = "sndon"
+          type="button">Sound on</button>
+          <button onclick="pauseAudio()" 
+          button class = "sndoff"
+          type="button">Sound off</button> 
+
+          <script>
+          var x = document.getElementById("Musiquinha do menu")
+          function playAudio() { 
+          x.play(); 
+         } 
+
+          function pauseAudio() { 
+          x.pause(); 
+} 
+</script>
+
+          <script>
+            var audio = document.getElementById("Musiquinha do menu");
+            audio.volume = 0.15;
+          </script>
+
+</body>
+</html>

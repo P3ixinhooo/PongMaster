@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Pong Menu</title>
+<link rel="stylesheet" href="menu.css">
+</head>
+<body>
+        <a href="http://127.0.0.1:5500/index.html">
+            <button
+            button class="btn4">Voltar</button>
+        </a>
+        <p id="test4"
+        p class="texto4">Bem-vindo à versão beta do Pong Master!</p> 
+        <p id="test4"
+        p class="texto4">O Pong Master é um jogo bastante fácil de jogar, uma vez que só tens de mover o teu cursor para controlar o teu paddle e o teu objetivo é marcar mais pontos que o Padote.</p>
+        <p id="test4"
+        p class="texto4">O Padote é o bot do jogo contra o qual vais jogar, mas não te deixes enganar! Ele inicialmente era uma peça do Tetris que não se encaixava em lado nenhum, então fugiu para este jogo com o objetivo de provar que não é inútil e que é tão bom que se consegue tornar um dos melhores bosses dos jogos arcade.</p>
+        <p id="test4"
+        p class="texto4">Diverte-te a jogar e esperemos que gostes!</p>
+        <p id="test4"
+        p class="texto4">Voltaremos em breve com novidades ;)</p> 
+        <p id="test4"
+        p class="texto4">Ass: Desenvolvedores.</p>
+
+        <audio autoplay id="AudioInfo">
+            <source src="Info.mp3">
+          </audio>
+        <button onclick="pauseAudio()" 
+          button class = "sndoff3"
+          type="button">Sound off</button>
+          
+          <script>
+        var x = document.getElementById("AudioInfo")
+          function pauseAudio() { 
+          x.pause(); 
+        }
+    </script>
+        <script>
+               var audio = document.getElementById("AudioInfo");
+            audio.volume = 1;
+        </script>
+</body>
+</html>
